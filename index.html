@@ -4,84 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Inn!</title>
-    <link rel="icon" href="https://github.com/dsp-web/dsp-web.github.io/blob/main/logo_for_browse_inn_browser_blue_more.jpeg?raw=true" type="image/jpeg">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4d6a0; /* warm beige background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #5c3b1e; /* brown text */
         }
+
+        /* Logo container */
         .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f7e3c3; /* lighter beige box */
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
         }
+
+        /* Logo text */
+        .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #8b5a2b; /* deep brown */
+            letter-spacing: 1px;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-size: 1rem;
+            color: #6b4423; /* softer brown */
+            margin-bottom: 30px;
+        }
+
+        /* Search Box */
         .search-container {
-            width: 500px;
-            margin: 200px auto 0;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
+            display: flex;
+            width: 90%;
+            max-width: 500px;
+            background: #fff8ef;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 8px;
         }
-        input[type="text"] {
-            width: 70%;
-            padding: 10px;
+
+        .search-container input[type="text"] {
+            flex: 1;
+            border: none;
+            outline: none;
             font-size: 16px;
-            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 30px 0 0 30px;
+            background: transparent;
         }
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #03055B; /* dark blue */
+
+        .search-container button {
+            background: #8b5a2b; /* brown button */
             color: #fff;
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 0 30px 30px 0;
             cursor: pointer;
+            transition: background 0.3s;
         }
-        input[type="submit"]:hover {
-            background-color: #020344; /* darker blue on hover */
+
+        .search-container button:hover {
+            background: #6b4423; /* darker brown */
         }
-        .title {
-            color: #03055B; /* dark blue */
-            font-size: 24px;
-            margin-bottom: 20px;
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 14px;
+            color: #5c3b1e;
             text-align: center;
-            margin-top: 100px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+<img src="https://scontent.fcai20-6.fna.fbcdn.net/v/t1.15752-9/533218924_1474534143680427_8481093806430514697_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGxB4QsSaBz7OTTeZ792eewF2lZr_2QpLIXaVmv_ZCksj3tGLZ7xLZbTJiGumWuLCHEeYl9cZ4EpIAAhfIHMi5T&_nc_ohc=9jEj_d9BPMkQ7kNvwFuQC-h&_nc_oc=AdmNmFitYRwSnMFTsVqptSB5_RPE2OwYTlzgkGUVct_WcNpu4HzesXIkT1Kh5dClBHo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&oh=03_Q7cD3AFkjLz7iLweKhgl4XLumxCS80-ucGSzQj6njg1efCCFpw&oe=68C5371A" width=120 length=160>
+
+    <!-- Logo with uploaded image -->
     <div class="logo">
-        <img src="https://github.com/dsp-web/dsp-web.github.io/blob/main/logo_for_browse_inn_browser_blue_more.jpeg?raw=true" width="120" length="160" alt="Browse Inn Logo">
+        
+        <span class="logo-text">Browse Inn</span>
     </div>
-    <div class="title">
-        Browse Inn!
-    </div>
-    <div class="search-container">
-        <form action="https://www.google.com/search" method="get" target="_blank">
-            <input type="text" name="q" placeholder="Search on Browse Inn!">
-            <input type="submit" value="Search">
-        </form>
-    </div>
+
+    <div class="tagline">Your Gateway to the Web</div>
+
+    <!-- Search Form -->
+    <form action="https://www.google.com/search" method="get" target="_blank" class="search-container">
+        <input type="text" name="q" placeholder="Search the web..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <footer>
+        &copy; All Rights Reserved | DSP: The Smart Future
+    </footer>
+
 </body>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<footer>
-Browse Inn
-<br>
-Copyright &#169;
-<br>
-All Rights Reserved
-<br>
-By DSP: The Smart Future
 </html>
